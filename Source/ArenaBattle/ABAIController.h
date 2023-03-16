@@ -20,6 +20,8 @@ public:
 
 	static const FName HomePosKey;
 	static const FName PatrolPosKey;
+	static const FName TargetKey;
+
 private:
 	UPROPERTY()
 	class UBehaviorTree* BTAsset;
