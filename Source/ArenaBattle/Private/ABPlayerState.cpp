@@ -69,3 +69,9 @@ int32 AABPlayerState::GetCharacterLevel() const
 {
 	return CharacterLevel;
 }
+
+void AABPlayerState::AddGameScore()
+{
+	GameScore++;
+	OnPlayerStateChanged.Broadcast();
+}
