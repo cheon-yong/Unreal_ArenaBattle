@@ -25,12 +25,15 @@ public:
 	void AddGameScore() const;
 
 protected:
+	virtual void SetupInputComponent() override;
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
 	TSubclassOf<class UABHUDWidget> HUDWidgetClass;
 
 private:
+	void OnGamePause();
+
 	UPROPERTY()
 	class UABHUDWidget* HUDWidget;
 

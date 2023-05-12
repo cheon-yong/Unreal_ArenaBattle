@@ -27,6 +27,17 @@ void AABPlayerController::OnPossess(APawn* aPawn)
 	Super::OnPossess(aPawn);
 }
 
+void AABPlayerController::SetupInputComponent()
+{
+	Super::SetupInputComponent();
+	InputComponent->BindAction(TEXT("GamePause"), EInputEvent::IE_Pressed, this, &AABPlayerController::OnGamePause);
+}
+
+void AABPlayerController::OnGamePause()
+{
+
+}
+
 void AABPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
